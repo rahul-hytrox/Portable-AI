@@ -5,54 +5,68 @@ import { downloadFile, printProgressBar } from './downloader.js';
 
 export const PREDEFINED_MODELS = [
   {
-    name: "Qwen 2.5 Coder 0.5B Instruct (Q4_K_M) - Super light for quick testing",
-    repo: "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
-    file: "qwen2.5-coder-0.5b-instruct-q4_k_m.gguf",
-    sizeGB: "0.38 GB",
-    url: "https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF/resolve/main/qwen2.5-coder-0.5b-instruct-q4_k_m.gguf"
+    name: "Huihui [DeepSeek V4 Flash] - Fast reasoning for light devices",
+    repo: "huihui-ai/Huihui-DeepSeek-V4-Flash-abliterated-ds4-GGUF",
+    file: "Huihui-DeepSeek-V4-Flash-BF16-abliterated-ds4-Q2_K",
+    sizeGB: "99.7 GB",
+    url: "https://huggingface.co/huihui-ai/Huihui-DeepSeek-V4-Flash-abliterated-ds4-GGUF/resolve/main/Huihui-DeepSeek-V4-Flash-BF16-abliterated-ds4-Q2_K.gguf"
   },
   {
-    name: "Qwen 2.5 Coder 7B Instruct (Q4_K_M) - Best for development",
-    repo: "Qwen/Qwen2.5-Coder-7B-Instruct-GGUF",
-    file: "qwen2.5-coder-7b-instruct-q4_k_m.gguf",
-    sizeGB: "4.7 GB",
-    url: "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct-GGUF/resolve/main/qwen2.5-coder-7b-instruct-q4_k_m.gguf"
-  },
-  {
-    name: "Qwen 2.5 Coder 1.5B Instruct (Q4_K_M) - Ultra-fast coding for light devices",
-    repo: "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
-    file: "qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
-    sizeGB: "1.2 GB",
-    url: "https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF/resolve/main/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf"
-  },
-  {
-    name: "DeepSeek R1 Distill Qwen 7B (Q4_K_M) - High-performance reasoning",
-    repo: "unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF",
-    file: "DeepSeek-R1-Distill-Qwen-7B-Q4_K_M.gguf",
-    sizeGB: "4.7 GB",
-    url: "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF/resolve/main/DeepSeek-R1-Distill-Qwen-7B-Q4_K_M.gguf"
-  },
-  {
-    name: "DeepSeek R1 Distill Qwen 1.5B (Q4_K_M) - Fast reasoning for light devices",
-    repo: "unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
-    file: "DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf",
-    sizeGB: "1.1 GB",
-    url: "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF/resolve/main/DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf"
-  },
-  {
-    name: "Llama 3.2 3B Instruct (Q4_K_M) - Balanced general intelligence",
-    repo: "unsloth/Llama-3.2-3B-Instruct-GGUF",
-    file: "Llama-3.2-3B-Instruct-Q4_K_M.gguf",
-    sizeGB: "2.0 GB",
-    url: "https://huggingface.co/unsloth/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf"
+    name: "Llama 3 8B Instruct (Q2_K) - Fast reasoning for light devices",
+    repo: "RichardErkhov/unsloth_-_llama-3-8b-Instruct-gguf",
+    file: "llama-3-8b-Instruct.Q2_K.gguf",
+    sizeGB: "3.18 GB",
+    url: "https://huggingface.co/RichardErkhov/unsloth_-_llama-3-8b-Instruct-gguf/resolve/main/llama-3-8b-Instruct.Q2_K.gguf"
   },
   {
     name: "Llama 3 8B Instruct (Q4_K_M) - Standard general model",
-    repo: "unsloth/llama-3-8b-Instruct-gguf",
-    file: "llama-3-8b-Instruct-Q4_K_M.gguf",
+    repo: "RichardErkhov/unsloth_-_llama-3-8b-Instruct-gguf",
+    file: "llama-3-8b-Instruct.Q4_K_M.gguf",
     sizeGB: "4.9 GB",
-    url: "https://huggingface.co/unsloth/llama-3-8b-Instruct-gguf/resolve/main/llama-3-8b-Instruct-Q4_K_M.gguf"
-  }
+    url: "https://huggingface.co/RichardErkhov/unsloth_-_llama-3-8b-Instruct-gguf/resolve/main/llama-3-8b-Instruct.Q4_K_M.gguf"
+  },
+  {
+    name: "GPT OSS 20B (Q2_K) - Fast reasoning for light devices",
+    repo: "https://huggingface.co/unsloth",
+    file: "gpt-oss-20b-Q2_K.gguf",
+    sizeGB: "11.5 GB",
+    url: "https://huggingface.co/unsloth/gpt-oss-20b-GGUF/resolve/main/gpt-oss-20b-Q2_K.gguf"
+  },
+  {
+    name: "GPT OSS 20B (Q4_1) - Standard general model",
+    repo: "https://huggingface.co/unsloth",
+    file: "gpt-oss-20b-Q4_1.gguf",
+    sizeGB: "11.6 GB",
+    url: "https://huggingface.co/unsloth/gpt-oss-20b-GGUF/resolve/main/gpt-oss-20b-Q4_1.gguf"
+  },
+  {
+    name: "GPT OSS 20B (Q4_1) - Best for heavy devices",
+    repo: "https://huggingface.co/unsloth",
+    file: "gpt-oss-20b-Q2_K.gguf",
+    sizeGB: "13.8 GB",
+    url: "https://huggingface.co/unsloth/gpt-oss-20b-GGUF/resolve/main/gpt-oss-20b-UD-Q8_K_XL.gguf"
+  },
+  {
+    name: "Poe-8B-GLM5_Q2_K [Opus4.6 | Sonnet4.5| Grok | Gemini3Pro | Kimi] - Fast reasoning for light devices",
+    repo: "mradermacher/Poe-8B-GLM5-Opus4.6-Sonnet4.5-Kimi-Grok-Gemini-3-pro-preview-HERETIC-GGUF",
+    file: "Poe-8B-GLM5-Opus4.6-Sonnet4.5-Kimi-Grok-Gemini-3-pro-preview-HERETIC.Q2_K.gguf",
+    sizeGB: "3.28 GB",
+    url: "https://huggingface.co/mradermacher/Poe-8B-GLM5-Opus4.6-Sonnet4.5-Kimi-Grok-Gemini-3-pro-preview-HERETIC-GGUF/resolve/main/Poe-8B-GLM5-Opus4.6-Sonnet4.5-Kimi-Grok-Gemini-3-pro-preview-HERETIC.Q2_K.gguf"
+  },
+  {
+    name: "Poe-8B-GLM5_Q5_K_M [Opus4.6 | Sonnet4.5| Grok | Gemini3Pro | Kimi] - Standard general model",
+    repo: "mradermacher/Poe-8B-GLM5-Opus4.6-Sonnet4.5-Kimi-Grok-Gemini-3-pro-preview-HERETIC-GGUF",
+    file: "Poe-8B-GLM5-Opus4.6-Sonnet4.5-Kimi-Grok-Gemini-3-pro-preview-HERETIC.Q5_K_M.gguf",
+    sizeGB: "3.28 GB",
+    url: "https://huggingface.co/mradermacher/Poe-8B-GLM5-Opus4.6-Sonnet4.5-Kimi-Grok-Gemini-3-pro-preview-HERETIC-GGUF/resolve/main/Poe-8B-GLM5-Opus4.6-Sonnet4.5-Kimi-Grok-Gemini-3-pro-preview-HERETIC.Q2_K.gguf"
+  },
+  {
+    name: "Poe-8B-GLM5_F16 [Opus4.6 | Sonnet4.5| Grok | Gemini3Pro | Kimi] - Standard general model",
+    repo: "mradermacher/Poe-8B-GLM5-Opus4.6-Sonnet4.5-Kimi-Grok-Gemini-3-pro-preview-HERETIC-GGUF",
+    file: "Poe-8B-GLM5-Opus4.6-Sonnet4.5-Kimi-Grok-Gemini-3-pro-preview-HERETIC.f16.gguf",
+    sizeGB: "16.4 GB",
+    url: "https://huggingface.co/mradermacher/Poe-8B-GLM5-Opus4.6-Sonnet4.5-Kimi-Grok-Gemini-3-pro-preview-HERETIC-GGUF/resolve/main/Poe-8B-GLM5-Opus4.6-Sonnet4.5-Kimi-Grok-Gemini-3-pro-preview-HERETIC.f16.gguf"
+  },
 ];
 
 export async function selectAndPrepareModel(modelsDir, defaultModelFile) {
@@ -117,7 +131,7 @@ export async function selectAndPrepareModel(modelsDir, defaultModelFile) {
   console.log(`Scanning '${modelsDir}'...`);
   console.log(`Tip: You can drag and drop any GGUF file into the 'models' folder.`);
   console.log("========================================================");
-  
+
   let defaultIdx = -1;
   if (defaultModelFile) {
     defaultIdx = options.findIndex(opt => opt.file.toLowerCase() === defaultModelFile.toLowerCase());
@@ -137,7 +151,7 @@ export async function selectAndPrepareModel(modelsDir, defaultModelFile) {
   const getSelection = () => {
     return new Promise((resolve) => {
       const ask = () => {
-        const promptText = defaultIdx !== -1 
+        const promptText = defaultIdx !== -1
           ? `Enter selection [1-${options.length}] (default ${defaultIdx + 1}): `
           : `Enter selection [1-${options.length}]: `;
         rl.question(promptText, (answer) => {
