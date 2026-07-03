@@ -154,9 +154,14 @@ HUGGING_FACE_HUB_TOKEN=hf_yourPlaceholderReadTokenHere
 Check if you are running other web servers or instances on ports `7070` (Odysseus Web), `8080` (API Proxy), or `10086` (llama-server). Terminate them and run the startup script again.
 </details>
 
+<details>
+<summary><b>2. GGUF model fails to load or Out of Memory (OOM)</b></summary>
+
+If a selected GGUF model is too large for your system's VRAM/RAM, the proxy server will automatically step down the context size limit and reboot the backend. If it still crashes, download a smaller model quantization (e.g. Q4_K_M or Q2_K) or a model with fewer parameters (e.g. 1.5B or 3B).
+</details>
 
 <details>
-<summary><b>2. exFAT/FAT32 USB drive symbolic link errors</b></summary>
+<summary><b>3. exFAT/FAT32 USB drive symbolic link errors</b></summary>
 
 exFAT and FAT32 file systems do not support symbolic links. The launcher automatically detects this and falls back to **hardlinks** or copy operations to organize nested folders.
 </details>
